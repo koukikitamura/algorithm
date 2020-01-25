@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+        "name": "(lldb) Debug Running",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/work/a.out",
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}/work",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "lldb",
+        "setupCommands": [
+          {
+            "text": "settings set target.input-path ${workspaceFolder}/work/input",
+          }
+        ],
+        "preLaunchTask": "debug_build"
+    }
+  ]
+}
