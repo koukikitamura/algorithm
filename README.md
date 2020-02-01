@@ -1,4 +1,4 @@
-# Algoritm and Data structure
+# Algorithm and Data structure
 I wanna be Geek!
 
 ## Awesome Services
