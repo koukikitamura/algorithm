@@ -14,4 +14,5 @@
 | 半径 | redius |
 | 面積 | area |
 | 円周 | circumference |
+| 長方形 | ractangle|
 | 被演算子 | operand |
