@@ -11,8 +11,13 @@
 | 剰余| remainder |
 | 整数 | integer |
 | 実数 | real number |
-| 半径 | redius |
+| 半径 | radius |
 | 面積 | area |
 | 円周 | circumference |
-| 長方形 | ractangle|
+| 長方形 | rectangle|
 | 被演算子 | operand |
+
+## CS
+
+| グラフ構造の節 | Vertex(plural form is Vertices ) |
+| グラフ構造の辺 | Edge |

@@ -16,6 +16,7 @@
 
 ### cstdlib
 
+- calloc
 - malloc
 - free
 - atoi(ASCII to integer)
@@ -24,6 +25,10 @@
 
 - INT_MAX
 - INT_MIN
+
+### string
+
+- std::string
 
 ## Statement
 
@@ -44,10 +49,10 @@
 
 ### Format Specifiers
 
-%c => char
-%s => char *
-%d => int or short
-%ld => long
-%lld => long long
-%f => float
-%lf => double
+- %c => char
+- %s => char *
+- %d => int or short
+- %ld => long
+- %lld => long long
+- %f => float
+- %lf => double
