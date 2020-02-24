@@ -16,6 +16,8 @@
 | 円周 | circumference |
 | 長方形 | rectangle|
 | 被演算子 | operand |
+| ベクトル | vector |
+| 行列 | matrix |
 
 ## CS
 
