@@ -1,0 +1,4 @@
+#!/bin/bash
+
+g++ -std=c++11 -g work/n.cpp -o work/a.out
+work/a.out < work/input
