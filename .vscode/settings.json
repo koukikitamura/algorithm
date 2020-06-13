@@ -63,6 +63,7 @@
     "climits": "cpp",
     "set": "cpp",
     "map": "cpp",
-    "__tree": "cpp"
+    "__tree": "cpp",
+    "queue": "cpp"
   }
 }
