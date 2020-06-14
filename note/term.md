@@ -21,5 +21,5 @@
 
 ## CS
 
-| グラフ構造の節 | Vertex(plural form is Vertices ) |
-| グラフ構造の辺 | Edge |
+| グラフ構造の節 | vertex(plural form is vertices ) |
+| グラフ構造の辺 | edge |
