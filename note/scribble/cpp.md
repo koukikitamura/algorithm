@@ -11,17 +11,17 @@
 - c++は0とfalseが偽、0以外の数値とtrueが真
 - プロパティをコンストラクタで初期化するとそのクラスの型をもつ変数を定義した時にコンストラクトに渡す
 　ので初期化しないでクラスの型の変数宣言ができない。
-- vectorは可変長配列。メモリをあらかじめ確保するにはresizeとreserveがある。resizeはiteratorのendをsize - 1に動かすがreserveが動かさない。[]でアクセスする場合はresizeを使って、push_backを使う場合はreserveを使う。
+- vectorは可変長配列。メモリをあらかじめ確保するにはresizeとreserveがある。resizeはiteratorのendをsize - 1に動かすがreserveが動かさない。[]でアクセスする場合はresizeを使って、push_backを使う場合はreserveを使う。push_backはiteratorのendを後ろに進める。
 - 数値のdelimeterは'だが、c++14以上。
 - 配列の要素数が100万を越えるとスタックオバーフローする可能性がある。スタック領域は数MBなので。グローバル変数、vector、mallocを使ってヒープ領域にメモリを確保する。
 - 配列を関数内側で変更すると配列は変更される。vectorの値を変更してもvectorの値は変更されない。基本的に値がコピーされる形で、配列の場合はポインタをコピーしているので配列を変更すると参照先を変更する形となり、元の配列が変更される。
 ポインタの値渡しと参照渡しは異なる。配列の場合はポインタの値渡し。
 - 引数に渡すvectorの要素数が大きい(10^6)くらいだとTime Limie Exceededになる。その場合はvectorをグローバル変数にすると早くなる。
 - vector#push_backをすると自動的にresizeされる。ただし、明示的にreiszeして容量が足りている時でもreseizeして容量が１増えてしまう。vector#backは末尾のデータを参照するだけ、vector#pop_backは末尾のデータを削除する(sizeを-1する)。
-- priority queue はSTLとして #include <queue>で使える。stackは #include <stack>
+- priority queue はSTLとして #include <queue>のstd::priority_queueで使える。stackは #include <stack>
 - fibonacchi数列のn = 44ですらもメモ化をしない再帰関数呼び出しをすると1sec以上かかる。
 - 自分自身を2つ以上呼び出す可能性のある再帰関数はメモ化が有効。再帰関数は繰り返し処理に書き直せる。再帰関数でTimeExeecedErrorにる場合は関数内でメモ化すると2分以上から5秒程度に段違いに早くなる。関数呼び出しのコストがわかる。引数のvector or 文字列の要素数が多い場合は関数呼び出しは大きなコストとなり、実行時間が長くなる。再帰関数のよるメモ化より繰り返しによるメモ化の方が早い。n = 1000で再帰関数を呼び出すと、TimeExeededErrorになる可能性がある。
 - 深さ優先度探索において、連結成分(Connected Components)が２つ以上ある場合はが探索を2回以上やる必要がある。
-- graphの表現の仕方には隣接リスト(adjacency list)と隣接行列(adjacency matrix)の２つがある。入力は隣接リスト(adjacency list)だが扱うときは隣接行列(adjacency matrices)なことが多い。隣接行列はvertexの数の２乗に比例してメモリを消費する。隣接行列はedgeの数が少ないときはメモリを無駄遣い。n = 100,000くらいでedgeの数が少ない場合は隣接リストを使った方が良い。
 - サイズの大きいvector(10万程度)を値渡しして関数呼び出しをcallしまくる(5000回くらい)と関数呼び出しがオーバーヘッドになる。
 この場合は引数をグローバル変数にするか参照渡しをして値をコピーしないようにする。
+- umeric_limits<int>::max()に+1すると負の数になる(オーバーフローする)。なので、初期値としてinifinityを使った場合、加算をして比較にないよう気をつける。
