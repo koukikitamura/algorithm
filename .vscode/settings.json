@@ -65,7 +65,9 @@
     "map": "cpp",
     "__tree": "cpp",
     "queue": "cpp",
-    "valarray": "cpp"
+    "valarray": "cpp",
+    "stack": "cpp",
+    "list": "cpp"
   },
   "files.insertFinalNewline": false
 }
