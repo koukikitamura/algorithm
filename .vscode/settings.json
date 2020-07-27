@@ -67,7 +67,8 @@
     "queue": "cpp",
     "valarray": "cpp",
     "stack": "cpp",
-    "list": "cpp"
+    "list": "cpp",
+    "unordered_set": "cpp"
   },
   "files.insertFinalNewline": false
 }
