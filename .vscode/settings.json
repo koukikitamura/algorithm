@@ -72,7 +72,9 @@
     "deque": "cpp",
     "filesystem": "cpp",
     "forward_list": "cpp",
-    "regex": "cpp"
+    "regex": "cpp",
+    "__memory": "cpp",
+    "random": "cpp"
   },
   "files.insertFinalNewline": false
 }
