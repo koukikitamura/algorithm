@@ -11,7 +11,7 @@ using V = vector<T>;
 template <typename T, typename U>
 using P = pair<T, U>;
 
-int inf = INT32_MAX / 2;
+int inf = INT32_MAX;
 
 int main() {
   // n = バスの数
@@ -33,7 +33,11 @@ int main() {
 
   rep(k, n) {
     rep(i, n) {
+      if(dp[i][k] == inf) continue;
+
       rep(j, n) {
+        if(dp[k][j] == inf) continue;
+
         dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j]);
       }
     }
